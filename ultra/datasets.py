@@ -20,7 +20,7 @@ class GrailInductiveDataset(InMemoryDataset):
         # you'll need to delete the processed datasets then and re-run to cache a new dataset
         self.merge_valid_test = merge_valid_test
         super().__init__(root, transform, pre_transform)
-        self.data, self.slices = torch.load(self.processed_paths[0])
+        self.data, self.slices = torch.load(self.processed_paths[0], weights_only = False)
 
     @property
     def num_relations(self):
