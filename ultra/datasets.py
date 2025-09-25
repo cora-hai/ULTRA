@@ -596,6 +596,15 @@ class FB15k237_20(SparserKG):
 class FB15k237_50(SparserKG):   
     name = "FB15K-237-50"
 
+# add custom PICKLE dataset here
+class PICKLE(TransductiveDataset):
+    urls = [
+        "https://raw.githubusercontent.com/cora-hai/PICKLE_data-split/refs/heads/main/train.txt",
+        "https://raw.githubusercontent.com/cora-hai/PICKLE_data-split/refs/heads/main/valid.txt",
+        "https://raw.githubusercontent.com/cora-hai/PICKLE_data-split/refs/heads/main/test.txt",
+        ]
+    name = "pickle"
+
 
 class InductiveDataset(InMemoryDataset):
 
